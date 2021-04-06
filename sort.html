@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.min.css" integrity="sha512-y9glprRcVESvYY3suAqBUYXx0ySbQNvbzzgvLy9F2o38Y7XCNeq/No2gnHjV3+Rjyq5ijoPZRMXotpdw6jcG4g==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Wine House Filter</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="top-header container">
+      <h1>: Wine House</h1>
+      <div class="mark">
+        <a class="material-icons" href="/index.html">
+          keyboard_arrow_up
+        </a>
+        <a class="material-icons" href="javascript:;">
+          keyboard_arrow_down
+        </a>
+      </div>
+    </header>
+    <div class="filter container">
+      <div class="sort">
+        <h1>Body</h1>
+        <span class="b-light">light</span>
+        <span class="b-medium">medium</span>
+        <span class="b-full">full</span>
+      </div>
+      <div class="sort">
+        <h1>Category</h1>
+        <span class="c-redwine">Red Wine</span>
+        <span class="c-mix">Mix</span>
+        <span class="c-whitewine">White Wine</span>
+        <span class="c-rose">Rose</span>
+      </div>
+      <div class="sort">
+        <h1>Context</h1>
+        <span class="t-friends">Friends</span>
+        <span class="t-family">Family</span>
+        <span class="t-couple">Couple</span>
+        <span class="t-business">Business</span>
+        <span class="t-alone">Alone</span>
+        <span class="t-party">Party</span>
+      </div>
+    </div>
+    <main class="wines container"></main>
+    <div class="slide">
+      <div class="slide-base">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/airtable.browser.js"></script>
+  <script src="./js/drawBackground.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/handleSlide.js"></script>
+</body>
+
+</html>

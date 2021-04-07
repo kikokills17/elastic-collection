@@ -19,8 +19,13 @@ window.addEventListener('load', function () {
   drawBackground();
 
   function drawBackground() {
+    const wrapper = document.getElementsByClassName('wrapper')[0];
     const w = window.innerWidth;
-    const h = window.innerHeight;
+    // const h = window.innerHeight;
+    let h = wrapper.scrollHeight;
+    if (wrapper.scrollHeight <= window.innerHeight) {
+      h = window.innerHeight;
+    }
     let exist = document.getElementsByTagName('canvas')[0];
     if (exist) {
       exist.remove();
@@ -29,6 +34,15 @@ window.addEventListener('load', function () {
     } else {
       let canvas = makeCanvasEle(w, h);
       drawSquare(canvas, w, h);
+    }
+
+    const winesDiv = document.getElementsByClassName('wines')[0];
+    const sort = Array.from(document.getElementsByClassName('sort'));
+    if (window.innerWidth <= 768) {
+      winesDiv.style.display = "block";
+      sort.forEach(ele => {
+        ele.style.display = "none";
+      })
     }
   }
 

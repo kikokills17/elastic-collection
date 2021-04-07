@@ -143,6 +143,32 @@ window.addEventListener('load', function () {
       span.addEventListener('click', handleSort);
     })
 
+    // switch filter options
+    const mark = document.getElementsByClassName('mark')[0];
+    const sort = Array.from(document.getElementsByClassName('sort'));
+    const winesDiv = document.getElementsByClassName('wines')[0];
+    console.log(winesDiv);
+    mark.addEventListener('click', function () {
+      sort.forEach(ele => {
+        // console.log(ele.style.display);
+        if (!ele.style.display || ele.style.display === "none") {
+          ele.style.display = "flex";
+          if (window.innerWidth <= 768) {
+            winesDiv.style.display = "none";
+          } else {
+            winesDiv.style.display = "block";
+          }
+        } else {
+          ele.style.display = "none";
+          if (window.innerWidth <= 768) {
+            winesDiv.style.display = "block";
+          }
+        }
+      })
+
+      
+    })
+
   }
 })
 

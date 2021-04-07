@@ -105,7 +105,11 @@ body {
 }
 
 .item-img img {
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: auto;
   height: 100%;
 }
 
@@ -163,6 +167,7 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  display: none;
 }
 
 .filter .sort h1 {
@@ -189,15 +194,6 @@ body {
   color: #fff;
   background-color: #000AFC!important;
 }
-.red {
-  background-color: red;
-}
-.green {
-  background-color: green;
-}
-.hd {
-  display: none;
-}
 /* sort end */
 
 
@@ -209,6 +205,77 @@ body {
   width: 2.4rem;
   margin-right: 9rem;
 }
-.mark a {
+.mark span {
   cursor: pointer;
+}
+
+
+/* media query */
+@media screen and (max-width: 768px) {
+  .index_filter {
+    display: none;
+  }
+  .sort_wines {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  .sort_filter {
+    margin-top: 6.5rem;
+    height: 80%;
+  }
+  .sort_filter .sort {
+    margin-bottom: 10%;
+  }
+  .sort_filter .sort h1 {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .sort_filter .sort span {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-right: 1rem;
+  }
+  .slide {
+    display: none;
+  }
+  html, body {
+    height: 100%;
+    min-height: 81.2rem;
+  }
+  .wrapper .container {
+    padding: 0 2.2rem;
+  }
+  .top-header h1 {
+    padding-top: 2.2rem;
+    text-align: center;
+  }
+  .top-header .mark {
+    margin-right: 4.5rem;
+    top: 1rem;
+  }
+  .wines {
+    height: calc(100% - 9.5rem);
+  }
+  .wine-list {
+    height: 90%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .wine-list .wine-item {
+    margin-right: 0;
+    margin-bottom: 3.5rem;
+    min-width: 24rem;
+    height: auto;
+  }
+  .wine-list .wine-item .item-img {
+    height: 24rem;
+  }
+  .wine-list .wine-item .titles {
+    margin-top: 1rem;
+  }
+  
 }

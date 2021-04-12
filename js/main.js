@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
   // console.log(Airtable);
 
   // use airtable library, connect to our base using API key
-  var base = new Airtable({ apiKey: 'keyloGFGjDynz8Y9k' }).base('app6zc4s5reZmh12Y');
+  var base = new Airtable({ apiKey: 'keyoBnsbDmjnnwAGR' }).base('app6zc4s5reZmh12Y');
 
   // get our collection base, select all the records
   // specify functions that will receive the data
@@ -147,7 +147,7 @@ window.addEventListener('load', function () {
     const mark = document.getElementsByClassName('mark')[0];
     const sort = Array.from(document.getElementsByClassName('sort'));
     const winesDiv = document.getElementsByClassName('wines')[0];
-    console.log(winesDiv);
+    // console.log(winesDiv);
     mark.addEventListener('click', function () {
       sort.forEach(ele => {
         // console.log(ele.style.display);
@@ -165,13 +165,20 @@ window.addEventListener('load', function () {
           }
         }
       })
-
-      
     })
-
   }
+
+
+  // function mobileScroll() {
+  //   const wList = document.getElementsByClassName('wine-list')[0];
+  //   let totalHeight = wList.scrollHeight;
+  //   wList.addEventListener('scroll', function () {
+  //     let percent = wList.scrollTop / totalHeight;
+  //     const changeRate = 0.7 * percent;
+  //     let rateRes = parseInt((changeRate + 0.3) * 100);
+  //     rateRes = rateRes < 30 ? 30 : rateRes > 100 ? 100 : rateRes;
+  //     document.body.style.backgroundImage = `radial-gradient(50% 50% at 50% 50%, #FFA9A9 0%, #FFFFFF ${rateRes}% )`;
+  //   })
+  // }
+
 })
-
-
-
-

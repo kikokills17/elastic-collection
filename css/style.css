@@ -43,7 +43,7 @@ body {
 
 body {
   min-height: 568px;
-  background: radial-gradient(50% 50% at 50% 50%, #FFA9A9 0%, #FFFFFF 100%);
+  background-image: radial-gradient(50% 50% at 50% 50%, #FFA9A9 0%, #FFFFFF 30%);
 }
 
 .wrapper {
@@ -153,6 +153,7 @@ body {
 }
 .circle:active {
   background-color: #FF6262;
+  transform: scale(1.25) translate(0, -40%);
 }
 
 /* slide end */

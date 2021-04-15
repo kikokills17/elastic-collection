@@ -7,17 +7,7 @@ window.addEventListener('load', function () {
   // const oT2 = slideBase.offsetTop;
   // const oT3 = circle.offsetTop;
 
-  /*
-          offsetLeft1      oL2      oL3    oL4
-          window=>slide 
-                      slide=>s-base
-                            s-base=>circle
-                                      circle=>mouse
-        |               ______________________________________________
-        |<============>|<======>[<------>| <=> ~ |------------]      |
-        |              |_____________________________________________|
-        |<==========pageX====================>
-  */
+ 
 
   function handleSlide(e) {
     const wineList = document.getElementsByClassName('wine-list')[0];

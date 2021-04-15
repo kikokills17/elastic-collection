@@ -169,16 +169,6 @@ window.addEventListener('load', function () {
   }
 
 
-  // function mobileScroll() {
-  //   const wList = document.getElementsByClassName('wine-list')[0];
-  //   let totalHeight = wList.scrollHeight;
-  //   wList.addEventListener('scroll', function () {
-  //     let percent = wList.scrollTop / totalHeight;
-  //     const changeRate = 0.7 * percent;
-  //     let rateRes = parseInt((changeRate + 0.3) * 100);
-  //     rateRes = rateRes < 30 ? 30 : rateRes > 100 ? 100 : rateRes;
-  //     document.body.style.backgroundImage = `radial-gradient(50% 50% at 50% 50%, #FFA9A9 0%, #FFFFFF ${rateRes}% )`;
-  //   })
-  // }
+
 
 })
